@@ -186,8 +186,9 @@ new function(settings) {
         var i = 0, queryString = [], chunks = [], self = this;
         var encode = function(str) {
           str = str + "";
-          if ($spaces) str = str.replace(/ /g, "+");
-          return encodeURIComponent(str);
+          newstr = encodeURIComponent(str);
+          if ($spaces) newstr = newstr.replace(/ /g, "%20");
+          return newstr
         };
         var addFields = function(arr, key, value) {
           if (!is(value) || value === false) return;
