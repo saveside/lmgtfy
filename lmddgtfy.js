@@ -39,7 +39,7 @@ function cursorToIcon() {
 
 function go() {
     var qstring = $.query.empty().set("q", $.query.get("q")).toString();
-    window.location = "http://duckduckgo.com/" + qstring;
+    window.location = "https://duckduckgo.com/" + qstring;
 }
   
 function type(str, index) {
