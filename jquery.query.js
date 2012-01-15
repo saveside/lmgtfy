@@ -187,7 +187,6 @@ new function(settings) {
         var encode = function(str) {
           str = str + "";
           newstr = encodeURIComponent(str);
-          if ($spaces) newstr = newstr.replace(/ /g, "%20");
           return newstr
         };
         var addFields = function(arr, key, value) {
