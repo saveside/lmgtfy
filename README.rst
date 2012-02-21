@@ -1,6 +1,6 @@
 Let me Duck Duck Go that for you.
 
-http://lmddgtfy.com
+http://lmddgtfy.net
 
 LICENSING
 =========
