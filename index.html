@@ -34,16 +34,35 @@
                 position: absolute;
                 top: 0px;
                 left: 0px;
-                z-index: 1000;}
+                z-index: 1000;
+            }
             .lmddgtfy{
                 font-family: Helvetica, Arial, sans-serif;
-                font-weight: bold; font-size: 15pt;}
+                font-weight: bold; font-size: 15pt;
+            }
             #foryou{
-                margin-bottom: 10px;}
+                margin-bottom: 10px;
+            }
         </style>
-        <script type="text/javascript" src="http://code.jquery.com/jquery-1.4.2.min.js"></script>
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.js"></script>
         <script type="text/javascript" src="jquery.query.js"></script>
         <script type="text/javascript" src="lmddgtfy.js"></script>
+        <script type='text/javascript'>//<![CDATA[ 
+            $(window).load(function(){
+            $('#urlPreview').show().text("Start typing to see your LMDDGTFY link!");
+            var previewPrefix = "http://lmddgtfy.net/?q=";
+
+            $('#searchBox').on('keyup', function(e) {
+                var query = $(e.target).val();
+                query_uri = encodeURIComponent(query);
+                if (query_uri && query_uri.length > 0) {
+                    $('#urlPreview').show().text("Your lmddgtfy URL: " + previewPrefix + query_uri);
+                } else {
+                    $('#urlPreview').show().text("Start typing to see your LMDDGTFY link!");
+                }
+            });
+            });//]]>  
+        </script>
     </head>
     
     <body>
@@ -51,49 +70,44 @@
             <input type="text" id="hidden_input" style="display: none;" tabindex="0" /><img id="cursor" src="cursor.png" style="display: none;" alt="cursor"/>
             <div class="lmddgtfy">Let me</div>
                 <a href="/"><img src="nduck.v104.png" alt="Search Engine Duck Duck Go" style="margin-top:20px;margin-bottom:30px;" /></a>
-                <div class="lmddgtfy" id="foryou">that for you</div>
-                    <form name="x" action="/">
-                        <div style="border:1px solid #ff6666;border-top:1px solid #ff6666;width:390px;margin:auto;">
-                            <input type="text" name="q" onFocus="fq=1" onBlur="fq=0" style="outline:none;width:350px;color:#222;background:#FFF;font-family:'Segoe UI',Arial,sans-serif;font-size:20px;border:0 none;margin:0;padding:0;padding-left:5px;padding-top:5px;padding-bottom:5px;" onClick="if (this.value=='put search terms here') {this.value='';this.style.color='#222222';}"><input type="button" name="b" onClick="searchn()" value=" " style="background:transparent url(zoom.v101.png) no-repeat scroll 0 0;width:24px;height:24px;padding:0px;margin:0px;cursor:pointer;border:0 none;vertical-align:top;margin-top:8px;margin-left:6px;margin-right:4px;" title="Search" id="search_button">
-                        </div>
-                        <div style="margin-top:20px;"></div>
-                        <noscript>
-                            This site requires JavaScript.
-                        </noscript>
-                        <script type="text/javascript">
-                            w=window;
-                            d=document;
-                            b=0;
-                            setTimeout('d.x.q.focus()',100);
-                        </script>
-                        <script src="http://duckduckgo.com/d665.js" type="text/javascript"></script>
-                        <script type="text/javascript">
-                            fq=0;
-                            function searchn() {
-                                if(d.x.q.value==''||d.x.q.value=='put search terms here'){
-                                    d.x.q.value='put search terms here';
-                                    d.x.q.style.color='#AAAAAA';
-                                    setTimeout('d.x.q.onclick();d.x.q.focus();',1000);
-                                    return false;
-                                };
-                                setTimeout('d.x.submit()',100);
-                            };
-                            if (YAHOO.util.Cookie.get("i")=='-1') {
-                                document.write('<input type="hidden" name="v" value="n">');
-                            };
-                            if (YAHOO.util.Cookie.get("g")=='p') {
-                                d.x.method='POST';
-                                };
-                        </script>
-                        <div style="padding-left:0px;padding-top:30px;font-size:14px;text-align:center;width:450px;margin:auto;">
-                            <a href="http://duckduckgo.com/about.html">About</a> &nbsp;|&nbsp; <a href="http://duckduckgo.com/settings.html">Settings</a> &nbsp;|&nbsp; <a href="http://duckduckgo.com/goodies.html">Goodies</a>
-                            <script type="text/javascript">
-                                nib(0,'',' &nbsp;|&nbsp; ');
-                            </script>
-                            </div>
-                            <div style="padding-left:0px;padding-top:25px;font-size:10px;text-align:center;width:450px;margin:auto;">&copy; 2010 - <a href="http://duckduckgo.com/privacy.html">Privacy</a> &amp; <a href="http://duckduckgo.com/terms.html">Terms</a>
-                        </div>
-                    </form>
+            <div class="lmddgtfy" id="foryou">that for you</div>
+            <form name="x" action="/">
+                <div style="border:1px solid #ff6666;border-top:1px solid #ff6666;width:390px;margin:auto;">
+                    <input id="searchBox" type="text" name="q" onFocus="fq=1" onBlur="fq=0" style="outline:none; width:350px; color:#222; background:#FFF; font-family:'Segoe UI',Arial,sans-serif; font-size:20px; border:0 none; margin:0; padding:0; padding-left:5px; padding-top:5px; padding-bottom:5px;" onClick="if (this.value=='put search terms here') {this.value='';this.style.color='#222222';}"/><input type="button" name="b" onClick="searchn()" value=" " style="background:transparent url(zoom.v101.png) no-repeat scroll 0 0;width:24px;height:24px;padding:0px;margin:0px;cursor:pointer;border:0 none;vertical-align:top;margin-top:8px;margin-left:6px;margin-right:4px;" title="Search" id="search_button">
+                </div>
+                <div style="margin-top:20px;"></div>
+                <noscript>
+                    This site requires JavaScript.
+                </noscript>
+                <script type="text/javascript">
+                    w=window;
+                    d=document;
+                    b=0;
+                    setTimeout('d.x.q.focus()',100);
+                </script>
+                <script src="http://duckduckgo.com/d665.js" type="text/javascript"></script>
+                <script type="text/javascript">
+                    fq=0;
+                    function searchn() {
+                        if(d.x.q.value==''||d.x.q.value=='put search terms here'){
+                            d.x.q.value='put search terms here';
+                            d.x.q.style.color='#AAAAAA';
+                            setTimeout('d.x.q.onclick();d.x.q.focus();',1000);
+                            return false;
+                        };
+                        setTimeout('d.x.submit()',100);
+                    };
+                </script>
+                <div id='urlPreview'></div>
+                <div style="padding-left:0px;padding-top:30px;font-size:14px;text-align:center;width:450px;margin:auto;">
+                    <a href="http://duckduckgo.com/about.html">About</a> &nbsp;|&nbsp; <a href="http://duckduckgo.com/settings.html">Settings</a> &nbsp;|&nbsp; <a href="http://duckduckgo.com/goodies.html">Goodies</a>
+                    <script type="text/javascript">
+                        nib(0,'',' &nbsp;|&nbsp; ');
+                    </script>
+                </div>
+            <div style="padding-left:0px;padding-top:25px;font-size:10px;text-align:center;width:450px;margin:auto;">&copy; 2010 - <a href="http://duckduckgo.com/privacy.html">Privacy</a> &amp; <a href="http://duckduckgo.com/terms.html">Terms</a>
+            </div>
+            </form>
         </div>
     </body>
 </html>
