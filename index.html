@@ -47,22 +47,6 @@
         <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.js"></script>
         <script type="text/javascript" src="jquery.query.js"></script>
         <script type="text/javascript" src="lmddgtfy.js"></script>
-        <script type='text/javascript'>//<![CDATA[ 
-            $(window).load(function(){
-            $('#urlPreview').show().text("Start typing to see your LMDDGTFY link!");
-            var previewPrefix = "http://lmddgtfy.net/?q=";
-
-            $('#searchBox').on('keyup', function(e) {
-                var query = $(e.target).val();
-                query_uri = encodeURIComponent(query);
-                if (query_uri && query_uri.length > 0) {
-                    $('#urlPreview').show().text("Your lmddgtfy URL: " + previewPrefix + query_uri);
-                } else {
-                    $('#urlPreview').show().text("Start typing to see your LMDDGTFY link!");
-                }
-            });
-            });//]]>  
-        </script>
     </head>
     
     <body>
@@ -79,26 +63,11 @@
                 <noscript>
                     This site requires JavaScript.
                 </noscript>
-                <script type="text/javascript">
-                    w=window;
-                    d=document;
-                    b=0;
-                    setTimeout('d.x.q.focus()',100);
-                </script>
                 <script src="http://duckduckgo.com/d665.js" type="text/javascript"></script>
-                <script type="text/javascript">
-                    fq=0;
-                    function searchn() {
-                        if(d.x.q.value==''||d.x.q.value=='put search terms here'){
-                            d.x.q.value='put search terms here';
-                            d.x.q.style.color='#AAAAAA';
-                            setTimeout('d.x.q.onclick();d.x.q.focus();',1000);
-                            return false;
-                        };
-                        setTimeout('d.x.submit()',100);
-                    };
-                </script>
-                <div id='urlPreview'></div>
+                <div id='urlPreview' class='well'>
+                    Share this URL: <br />
+                    <code id='url'/>
+                </div>
                 <div style="padding-left:0px;padding-top:30px;font-size:14px;text-align:center;width:450px;margin:auto;">
                     <a href="http://duckduckgo.com/about.html">About</a> &nbsp;|&nbsp; <a href="http://duckduckgo.com/settings.html">Settings</a> &nbsp;|&nbsp; <a href="http://duckduckgo.com/goodies.html">Goodies</a>
                     <script type="text/javascript">

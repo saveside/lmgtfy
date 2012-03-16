@@ -53,7 +53,7 @@ function type(str, index) {
     }
 }
 
-$("body").ready(
+$(
     function() {
         var q = $.query.get("q");
         if (q != "") {
@@ -66,3 +66,48 @@ $("body").ready(
             setTimeout(cursorToInputField(), 200);
         }
     });
+
+//<![CDATA[ 
+$(window).load(function(){
+var urlPrefix = "http://lmddgtfy.net/?q=";
+
+function updatePreview(e) {
+    var query = $('#searchBox').val();
+    if (query && query.length > 0) {
+        var query_uri = encodeURIComponent(query);
+        $('#url').text(urlPrefix + query_uri);
+        $('#urlPreview').show();
+    } else {
+        $('#urlPreview').hide();
+    }
+}
+
+$('#searchBox').on('keyup', updatePreview);
+
+
+$(function(){
+    // uncomment to see onload url
+    // $('#searchBox').val("bananas");
+    
+    if($('#searchBox').val()) {
+        updatePreview();
+    }
+});
+
+});//]]>
+
+w=window;
+d=document;
+b=0;
+setTimeout('d.x.q.focus()',100);
+
+fq=0;
+function searchn() {
+    if(d.x.q.value==''||d.x.q.value=='put search terms here'){
+        d.x.q.value='put search terms here';
+        d.x.q.style.color='#AAAAAA';
+        setTimeout('d.x.q.onclick();d.x.q.focus();',1000);
+        return false;
+    };
+    setTimeout('d.x.submit()',100);
+};
