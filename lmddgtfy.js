@@ -71,6 +71,10 @@ $(
 $(window).load(function(){
 var urlPrefix = "http://lmddgtfy.net/?q=";
 
+var base = 'http://lmddgtfy.net/';
+$('#url').text(base);
+$('#urlPreview').show();
+
 function updatePreview(e) {
     var query = $('#searchBox').val();
     if (query && query.length > 0) {
@@ -78,12 +82,12 @@ function updatePreview(e) {
         $('#url').text(urlPrefix + query_uri);
         $('#urlPreview').show();
     } else {
-        $('#urlPreview').hide();
+        $('#url').text(base);
+        $('#urlPreview').show();
     }
 }
 
 $('#searchBox').on('keyup', updatePreview);
-
 
 $(function(){
     // uncomment to see onload url
