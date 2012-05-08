@@ -1,0 +1,14 @@
+Options +FollowSymlinks
+RewriteEngine on
+RewriteBase /
+
+# disable the server signature
+ServerSignature Off
+
+# preserve bandwidth for PHP enabled servers
+<ifmodule mod_php4.c>
+    php_value zlib.output_compression 16386
+</ifmodule>
+
+# set the default character set
+AddDefaultCharset UTF-8
