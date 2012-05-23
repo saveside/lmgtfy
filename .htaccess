@@ -1,6 +1,21 @@
 Options +FollowSymlinks
+AddEncoding gzip gz
+
 RewriteEngine on
 RewriteBase /
+
+# compression stuffs
+RewriteCond %{HTTP:Accept-Encoding} gzip
+RewriteCond %{REQUEST_FILENAME}.gz -f
+RewriteRule ^(.*)$ $1.gz [QSA,L]
+
+<Files *.css.gz>
+ForceType text/css
+</Files>
+
+<Files *.js.gz>
+ForceType text/javascript
+</Files>
 
 # disable the server signature
 ServerSignature Off
