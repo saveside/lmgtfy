@@ -1,4 +1,6 @@
-# -- No blocking necessary, but here are the lyrics to the song Mr. Roboto, by Styx.
+User-agent: *
+Disallow: logs.py
+# -- very little blocking necessary, so here are the lyrics to the song Mr. Roboto, by Styx.
 #
 #
 #(Domo Arigato, Mr. Roboto)
