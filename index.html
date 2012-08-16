@@ -8,7 +8,7 @@
         <title>Let Me DuckDuckGo That For You</title>
         <link title="Duck Duck Go" type="application/opensearchdescription+xml" rel="search" href="https://duckduckgo.com/opensearch.xml">
         <link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/yegg" />
-        <link rel="apple-touch-icon" href="icon128.png" />
+        <link rel="apple-touch-icon" href="images/icon128.png" />
         <style type="text/css">
             img{
                 -ms-interpolation-mode: bicubic;}
@@ -39,20 +39,20 @@
             }
         </style>
         <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
-        <script type="text/javascript" src="jquery.query.js"></script>
-        <script type="text/javascript" src="lmddgtfy.js"></script>
+        <script type="text/javascript" src="js/jquery.query.js"></script>
+        <script type="text/javascript" src="js/lmddgtfy.js"></script>
     </head>
 
     <body>
         <br />
         <div style="width:600px;margin:auto;text-align:center;">
-            <input type="text" id="hidden_input" style="display: none;" tabindex="0" /><img id="cursor" src="cursor.png" width="15" height="21" style="display: none;" alt="cursor"/>
+            <input type="text" id="hidden_input" style="display: none;" tabindex="0" /><img id="cursor" src="images/cursor.png" width="15" height="21" style="display: none;" alt="cursor"/>
             <div class="lmddgtfy">Let me</div>
-                <a href="/"><img src="logo_homepage.normal.v101.png" alt="Search Engine Duck Duck Go" style="margin-top:20px;margin-bottom:30px;" width="202" height="160" /></a>
+                <a href="/"><img src="images/logo_homepage.normal.v101.png" alt="Search Engine Duck Duck Go" style="margin-top:20px;margin-bottom:30px;" width="202" height="160" /></a>
             <div class="lmddgtfy" id="foryou">that for you</div>
             <form name="x" action="/">
                 <div style="border:1px solid #ff6666;border-top:1px solid #ff6666;width:390px;margin:auto;">
-                    <input id="searchBox" type="text" name="q" onFocus="fq=1" onBlur="fq=0" style="outline:none; width:350px; color:#222; background:#FFF; font-family:'Segoe UI',Arial,sans-serif; font-size:20px; border:0 none; margin:0; padding:0; padding-left:5px; padding-top:5px; padding-bottom:5px;" onClick="if (this.value=='put search terms here') {this.value='';this.style.color='#222222';}"/><input type="button" name="b" onClick="searchn()" value=" " style="background:transparent url(zoom.v101.png) no-repeat scroll 0 0;width:24px;height:24px;padding:0px;margin:0px;cursor:pointer;border:0 none;vertical-align:top;margin-top:8px;margin-left:6px;margin-right:4px;" title="Search" id="search_button">
+                    <input id="searchBox" type="text" name="q" onFocus="fq=1" onBlur="fq=0" style="outline:none; width:350px; color:#222; background:#FFF; font-family:'Segoe UI',Arial,sans-serif; font-size:20px; border:0 none; margin:0; padding:0; padding-left:5px; padding-top:5px; padding-bottom:5px;" onClick="if (this.value=='put search terms here') {this.value='';this.style.color='#222222';}"/><input type="button" name="b" onClick="searchn()" value=" " style="background:transparent url(images/zoom.v101.png) no-repeat scroll 0 0;width:24px;height:24px;padding:0px;margin:0px;cursor:pointer;border:0 none;vertical-align:top;margin-top:8px;margin-left:6px;margin-right:4px;" title="Search" id="search_button">
                 </div>
                 <div style="margin-top:20px;"></div>
                 <noscript>
@@ -72,7 +72,7 @@
                         nib(0,'',' &nbsp;|&nbsp; ');
                     </script>
                 </div>
-                <a href="http://internetdefenseleague.org"><img src="footer_badge.png" alt="Member of The Internet Defense League" /></a>
+                <a href="http://internetdefenseleague.org"><img src="images/footer_badge.png" alt="Member of The Internet Defense League" /></a>
                 <div style="padding-left:0px;font-size:10px;text-align:center;width:450px;margin:auto;">
                     &copy; 2012 - <a href="https://duckduckgo.com/privacy.html">Privacy</a> &amp; <a href="https://duckduckgo.com/terms.html">Terms</a> &amp; <a href="https://github.com/myano/lmddgtfy">Source</a> &amp; <a href="logs.py">Logs</a> &amp; <a href="logs">Logs Source</a>
             </div>
