@@ -4,6 +4,8 @@ Disallow: logs.py
 Disallow: top10
 Disallow: top10.py
 
+Sitemap: http://lmddgtfy.net/sitemap.xml
+
 # -- very little blocking necessary, so here are the lyrics to the song Mr. Roboto, by Styx.
 #
 #
