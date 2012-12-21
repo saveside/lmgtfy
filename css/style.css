@@ -89,5 +89,25 @@ a{
 }
 .bk{
     border:0px;
-    padding: 3px;
+    padding:3px;
+}
+.sbutton{
+    background:transparent url(../images/zoom.v101.png);
+    background-repeat: no-repeat;
+    width:24px;
+    height:24px;
+    padding:0px;
+    margin:0px;
+    cursor:pointer;
+    border:0 none;
+    vertical-align:top;
+    margin-top:8px;
+    margin-left:6px;
+    margin-right:4px;
+}
+#divsearch{
+    border:1px solid #ff6666;
+    border-top:1px solid #ff6666;
+    width:390px;
+    margin:auto;
 }
