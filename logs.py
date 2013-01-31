@@ -23,7 +23,7 @@ def main():
             stdout=PIPE).stdout.read().split('\n')
     print "<pre>"
     for x in s:
-        if not "reqs.py" in x and not "logs.py" in x:
+        if not "reqs.py" in x and not "logs.py" in x and not "beta.php" in x and not "alpha2.php" in x:
             print x
     print "</pre>"
     print "</body>"
