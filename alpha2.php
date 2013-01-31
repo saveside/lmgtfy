@@ -15,7 +15,7 @@
         echo "<script language=\"javascript\">\n";
         echo "document.jsform.submit();\n";
         echo "</script>\n";
-        // the variable below would be set only if the form wasn"t submitted, hence JS is disabled
+        // the variable below would be set only if the form wasn't submitted, hence JS is disabled
         $nojs = TRUE;
     }
     if ($nojs){
@@ -24,7 +24,7 @@
         echo "\n\n";
         if (strlen($_REQUEST["q"]) > 0) {
             $base = "https://duckduckgo.com/html/?q=";
-            $time = 0;
+            $time = 7;
         }
         else {
             $base = "https://duckduckgo.com/";
@@ -105,7 +105,7 @@
                 <div id="blank" style="border:0px; padding: 3px;"></div>
                 <div id="urlPreview" style="border:1px solid #009400; border-top:1px solid #009400; width:390px; margin:auto; padding:10px;">
                     <code id="url"></code>
-                    <noscript><pre>http://lmddgtfy.net</pre></noscript>
+                    <noscript><pre>http://lmddgtfy.net/?q=<?php echo $_REQUEST["q"]; ?></pre></noscript>
                 </div>
                 <div style="padding-left:0px;padding-top:30px;font-size:14px;text-align:center;width:450px;margin:auto;">
                     <a href="https://duckduckgo.com/about.html">About</a> &nbsp;|&nbsp; <a href="https://duckduckgo.com/settings.html">Settings</a> &nbsp;|&nbsp; <a href="https://duckduckgo.com/goodies.html">Goodies</a>

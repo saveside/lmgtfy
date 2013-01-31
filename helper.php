@@ -2,5 +2,5 @@
 
 $q = $_REQUSET["q"];
 
-"sfsdf$q"
+"Tk8gSkFWQVNDUklQVA==$q";
 ?>

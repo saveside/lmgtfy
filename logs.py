@@ -19,11 +19,12 @@ def main():
 """
 
     from subprocess import Popen, PIPE
-    s = Popen(['tail', '-25', '/var/www/lmddgtfy.net/logs/access.log'],
+    s = Popen(['tail', '-75', '/var/www/lmddgtfy.net/logs/access.log'],
             stdout=PIPE).stdout.read().split('\n')
     print "<pre>"
     for x in s:
-        print x
+        if not "reqs.py" in x and not "logs.py" in x:
+            print x
     print "</pre>"
     print "</body>"
     print "</html>"

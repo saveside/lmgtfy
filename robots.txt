@@ -1,9 +1,9 @@
 User-agent: *
-Disallow: logs
-Disallow: logs.py
-Disallow: top10
-Disallow: top10.py
-Disallow: reqs.py
-Disallow: reqs
+Disallow: /logs
+Disallow: /logs.py
+Disallow: /top10
+Disallow: /top10.py
+Disallow: /reqs.py
+Disallow: /reqs
 
 Sitemap: http://lmddgtfy.net/sitemap.xml
