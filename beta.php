@@ -57,7 +57,8 @@
                         echo "            Therefore I am redirecting your query straight to DuckDuckGo....<br /><br />\n";
                     }
                     else {
-                        echo "            However, this site doesn't work without javascript.<br /><br />\n";
+                        echo "            I can't generate a URL for you to share without javascript.<br />\n";
+                        echo "            Please enable javascript if you'd like me to generate a URL for you.<br /><br />\n";
                     }
                 }
             ?>
@@ -68,7 +69,7 @@
                 <div id="divsearch">
                     <input id="searchBox" type="text" name="q" onFocus="fq=1" onBlur="fq=0" class="sbox" onClick="if (this.value=='put search terms here') {this.value='';this.style.color='#222222';}"/><input type="button" name="b" onClick="searchn()" value=" " title="Search" class="sbutton" id="search_button">
                 </div>
-                <div id="blank" class="bk"></div>
+                <div class="bk"></div>
                 <br /> Share this URL: <br />
                 <div id="blank" class="bk"></div>
                 <div id="urlPreview" class="urlP">
