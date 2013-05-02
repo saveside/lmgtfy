@@ -1,6 +1,3 @@
 <?php
-
-$q = $_REQUSET["q"];
-
-"Tk8gSkFWQVNDUklQVA==$q";
+    $q = $_REQUSET["q"];
 ?>
