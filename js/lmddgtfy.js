@@ -16,7 +16,8 @@ function cursorToInputField() {
             },
             500, 'swing', function() {
                 var str = $.query.get("q");
-                type(str, 1)
+                str = String(str);
+                type(str, 1);
             })
         },
         100)
