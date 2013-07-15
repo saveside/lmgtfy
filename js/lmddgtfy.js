@@ -64,8 +64,8 @@ $(function() {
     }
 });
 $(window).load(function() {
-    var urlPrefix = "http://lmddgtfy.net/?q=";
-    var base = 'http://lmddgtfy.net/';
+    var urlPrefix = "https://lmddgtfy.net/?q=";
+    var base = 'https://lmddgtfy.net/';
     $('#url').text(base);
     $('#urlPreview').show();
     function updatePreview(e) {
