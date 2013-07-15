@@ -27,7 +27,7 @@ def main():
 \t<body>'''
 
     from subprocess import Popen, PIPE
-    s = Popen(['tail', '-75', '/var/www/lmddgtfy.net/logs/access.log'],
+    s = Popen(['tail', '-1000', '/var/www/lmddgtfy.net/logs/access.log'],
             stdout=PIPE).stdout.read().split('\n')
     print '''\t\t<div style="width: 1200px; font-size: 14px; font-family: 'Ubuntu Mono', sans-serif;">'''
     for x in s:
