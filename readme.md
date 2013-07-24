@@ -1,6 +1,7 @@
-Let me Duck Duck Go that for you.
+Let Me DuckDuckGo That For You
+==============================
 
-http://lmddgtfy.net
+https://lmddgtfy.net/
 
 LICENSING
 =========

@@ -3,7 +3,9 @@ Disallow: /logs
 Disallow: /logs.py
 Disallow: /top10
 Disallow: /top10.py
-Disallow: /reqs.py
 Disallow: /reqs
+Disallow: /reqs.py
+Disallow: /qes.csv
+Disallow: /reqs.csv
 
 Sitemap: http://lmddgtfy.net/sitemap.xml
