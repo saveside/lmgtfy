@@ -9,14 +9,6 @@ RewriteCond %{HTTP:Accept-Encoding} gzip
 RewriteCond %{REQUEST_FILENAME}.gz -f
 RewriteRule ^(.*)$ $1.gz [QSA,L]
 
-Options +FollowSymlinks
-RewriteEngine On
-RewriteBase /
-
-RewriteCond %{HTTPS} off
-RewriteCond %{HTTP_HOST} ^lmddgtfy.net$ [NC]
-RewriteRule (.*) https://lmddgtfy.net/$1 [R=301,L]
-
 <Files *.css.gz>
     ForceType text/css
 </Files>
