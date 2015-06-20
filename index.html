@@ -1,108 +1,64 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <!-- metadata -->
-        <meta charset="utf-8">
+        <link href="css/style.css" rel="stylesheet" type="text/css" />
         <link rel="canonical" href="https://lmddgtfy.net/" />
-        <meta name="robots" content="index, follow, archive, cache, imageindex">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="author" content="Zeke Y">
-        <meta name="keywords" content="duckduckgo, duck duck go, ddg, lmddgtfy, let me duckduckgo that for you, lmdtfy, let me duck that for you, let me search that for you, search, search engine, new search engine, web search, let me, that for you, privacy, metasearch, proxy search, image search, video search, news search, search engine privacy, private, engine, lmsptfy, lmddgtfy, lmgtfy, lmsptfy.com, lmddgtfy.net, lmddgtfy.com, lmgtfy.com, let me google that for you, duck.co, let me duckduckgo that for you, duckduckgo, ddg">
+        <meta name="description" content="New search engine with better results and less garbage.">
+        <meta name="keywords" content="search, search engine, new search engine, web search, let me, that for you, privacy, metasearch, proxy search, image search, video search, news search, search engine privacy, private, engine, lmsptfy, lmddgtfy, lmgtfy, lmsptfy.com, lmddgtfy.net, lmddgtfy.com, lmgtfy.com, let me google that for you, duck.co, let me duckduckgo that for you, duckduckgo, ddg">
+        <title>Let Me DuckDuckGo That For You</title>
         <link title="Duck Duck Go" type="application/opensearchdescription+xml" rel="search" href="https://duckduckgo.com/opensearch.xml">
-
-        <title>Let Me DuckDuckGo That For You - LMDDGTFY</title>
-
-        <!-- stylesheets -->
-        <link rel="stylesheet" href="fonts/genericons/genericons.css">
-        <link rel="stylesheet" href="fonts/open_sans/open_sans.min.css">
-        <link rel="stylesheet" href="css/style.min.css">
-
-        <!-- for users without javascript -->
-        <noscript>
-            <style>
-                .shortened-url-result, .url-output {
-                    display: none;
-                }
-            </style>
-        </noscript>
     </head>
-    <body class="light-theme">
-        <!-- the red border along the top -->
-        <div class="top-border"></div>
 
-        <!-- theme settings -->
-        <div class="theme-settings">
-            <img src="img/light-theme-icon.png" id="light-theme-icon" class="theme-icon" draggable="false">
-            <img src="img/dark-theme-icon.png" id="dark-theme-icon" class="theme-icon" draggable="false">
-        </div>
-
-        <!-- header -->
-        <h1 class="main-header">
-            <a href="https://duckduckgo.com/?t=lmddgtfy" class="ddg-logo-link ddg-logo-container">
-                <img src="img/ddg-logo-light-theme.png" alt="DuckDuckGo logo" class="ddg-logo" id="ddg-logo">
-            </a>
-            Let Me DuckDuckGo That For You
-        </h1>
-
-        <!-- search bar -->
-        <div class="search-container">
-            <noscript>
-                <style>
-                    #search-form {
-                        display: none;
-                    }
-                </style>
-
-                <form id="search-form-no-js" class="search-form" name="search" method="GET" action="https://duckduckgo.com/html">
-                    <img id="cursor" class="cursor">
-
-                    <input autofocus autocorrect="off" autocapitalize="off" id="search-input" class="search-input" autocomplete="off" name="q" tabindex="1" value="" type="text">
-                    <input type="hidden" name="t" value="lmddgtfy">
-                    <input type="hidden" name="kae" value="-1" id="ddg-theme-url-param">
-                    <input type="submit" tabindex="2" value="" id="search-submit" class="search-submit genericon">
-                </form>
-            </noscript>
-
-            <form id="search-form" class="search-form" name="search" method="GET" action="https://duckduckgo.com">
-                <img id="cursor" class="cursor">
-
-                <input autofocus autocorrect="off" autocapitalize="off" id="search-input" class="search-input" autocomplete="off" name="q" tabindex="1" value="" type="text">
-                <input type="hidden" name="t" value="lmddgtfy">
-                <input type="hidden" name="kae" value="-1" id="ddg-theme-url-param">
-                <input type="submit" tabindex="2" value="" id="search-submit" class="search-submit genericon">
-            </form>
-        </div>
-
-        <!-- the url to share -->
-        <div class="url-result-container search-container">
-            <form class="search-form url-output-form">
+    <body>
+        <br />
+        <div id="dmain">
+            <input type="text" id="hidden_input" class="nodisp" tabindex="0" /><img id="cursor" src="images/cursor.png" width="15" height="21" class="nodisp" alt="cursor"/>
+            <div class="lmddgtfy">Let me</div>
+            <a href="/"><img src="images/logo_homepage.normal.v101.png" alt="Search Engine Duck Duck Go" id="homelogo" width="202" height="160" /></a>
+            <div class="lmddgtfy" id="foryou">that for you</div>
+            <form name="x" action="/">
+                <div id="divsearch">
+                    <input id="searchBox" type="text" name="q" onFocus="fq=1" onBlur="fq=0" class="sbox" onClick="if (this.value=='put search terms here') {this.value='';this.style.color='#222222';}"/><input type="button" name="b" onClick="searchn()" value=" " class="sbutton" title="Search" id="search_button">
+                </div>
+                <div id="nothing"></div>
                 <noscript>
-                    <span class="no-js-url-output">Please enable JavaScript to share your search.</span>
+                    Please share the wonders of <a href="https://duckduckgo.com/" target="_blank">DuckDuckGo</a>!<br /><br />
+                    This site requires JavaScript.
                 </noscript>
-
-                <output for="search-input" name="url-output" class="url-output">
-                    <label for="url-result" class="url-result-label">Share this search: </label>
-                    <input type="text" id="url-result" class="search-input url-result" readonly>
-                    <!-- give them the option to shorten the url -->
-                    <small><a href="" id="shorten-url-result" class="shortened-url-result" tabindex="4">Shorten URL</a></small>
-                    or
-                    <small class="large-screen-preview-link"><a href="" class="preview-search-link">Preview search</a></small>
-                    <small class="small-screen-preview-link"><a href="" class="preview-search-link">Preview</a></small>
-                </output>
+                <br /> Share this URL: <br />
+                <div id="blank" class="bk"></div>
+                <div id="urlPreview" class="urlP">
+                    <code id="url"></code>
+                    <noscript>https://lmddgtfy.net/</noscript>
+                </div>
+                <br />Follow us on:<br />
+                <a href="https://twitter.com/lmddgtfynet" target="_blank">Twitter</a>
+                <!--
+                &nbsp;|&nbsp;
+                <a href="https://plus.google.com/+LmddgtfyNet" rel="publisher">Google+</a>
+                -->
+                <br /><br />
+                *NEW* <a href="https://duckduckstart.com/" target="_blank">DuckDuckStart</a>
+                <br />
+                *NEW* <a href="https://lmsptfy.com/" target="_blank">Let Me Startpage That For You</a>
+                <br /><br />
+                <a href="https://flattr.com/thing/801778/Let-Me-DuckDuckGo-That-For-You" target="_blank"><img src="images/flattr-badge-large.png" alt="Flattr this" title="Flattr this" /></a>
+                <a href="https://www.gittip.com/myano/" target="_blank"><img src="images/gittip.png" alt="gittip" title="gittip" /></a>
+                <br /><br />
+                <span style="font-size: 12px;"><a href="http://3g2upl4pq6kufc4m.onion/" target="_blank">DuckDuckGo's Tor Hidden Service</a></span>
+                <br />
+                <div id="copyright">
+                    Created by: <a href="https://yanovich.net/" target="_blank">Michael Yanovich</a>
+                    <br />
+                    &copy; 2012-2014 - <a href="https://duckduckgo.com/privacy.html" target="_blank">DDG Privacy</a> &amp; <a href="https://github.com/myano/lmddgtfy" target="_blank">Source</a> &amp; <a href="traffic.html">Stats</a>
+            </div>
             </form>
         </div>
-
-        <!-- footer -->
-        <footer>
-            &copy; Copyright 2012 - <script>document.write(new Date().getFullYear());</script> <a href="" id="location-link">LMDDGTFY</a>. Created by <a href="https://kk4oxj.github.io">Zeke Y</a> and maintained by <a href="https://yanovich.net/">Michael Yanovich</a>.
-            <br>
-            <small>Dax (the DuckDuckGo mascot), and the word &ldquo;DuckDuckGo&rdquo; are copyrighted by <a href="https://duckduckgo.com/?t=lmddgtfy" target="_blank">DuckDuckGo</a></small>
-        </footer>
-
-        <!-- the rest of my scripts and stylesheets -->
-        <script type="text/javascript" src="/js/jquery.min.js"></script>
-        <!-- http://www.jqueryscript.net/text/jQuery-Plugin-To-Simulate-Human-Typing-typetype.html -->
-        <script type="text/javascript" src="/js/typetype.min.js"></script>
-        <script type="text/javascript" src="/js/script.js"></script>
+        <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+        <script type="text/javascript" src="js/jquery.query.js"></script>
+        <script type="text/javascript" src="js/lmddgtfy.js"></script>
+        <div align="center">
+            <br /><br />
+        </div>
     </body>
 </html>

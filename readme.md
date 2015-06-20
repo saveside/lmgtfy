@@ -1,5 +1,8 @@
-# LMDDGTFY
+Let Me DuckDuckGo That For You
+==============================
 
-[Let Me DuckDuckGo That For You - LMDDGTFY](https://lmddgtfy.github.io)
+https://lmddgtfy.net/
 
-Dax (the DuckDuckGo mascot), and the word “DuckDuckGo” are copyrighted by DuckDuckGo
+LICENSING
+=========
+The Duck Duck Go logo, associated icons, HTML code and Javascript files are copyright Duck Duck Go, used with permission.
