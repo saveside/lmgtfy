@@ -66,6 +66,8 @@ $(document).ready(function() {
     // when they press a key
     searchInput.keyup(function(event) {
       var searchVal = $('#search-input').val();
+      
+      $(this).attr("value", $(this).val());
 
       // make the link below the search bar show the right text and link to the right place
       urlResult.attr("value", window.location.protocol + "//" + window.location.host + window.location.pathname + "?q=" + encodeURIComponent(searchVal));
