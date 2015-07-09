@@ -162,7 +162,7 @@ input {
 
 .url-result-container {
   margin-top: 60px;
-  line-height: 46px;
+  line-height: 42px;
 }
 
 .url-output-form {
@@ -175,7 +175,7 @@ input {
 }
 
 .url-result {
-  width: 30%;
+  width: 40%;
   height: auto;
   overflow: hidden;
   text-overflow: ellipsis;
