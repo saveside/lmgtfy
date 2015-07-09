@@ -190,6 +190,7 @@ $(document).ready(function() {
     if (!shortenedURL) {
       $.getJSON(urlToShorten, function(data) {
         shortenedURL = data.shorturl;
+        shortenedURL = shortenedURL.replace("http:", "https:");
         urlResult.attr("value", shortenedURL);
       });
     }
