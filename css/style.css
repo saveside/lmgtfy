@@ -55,6 +55,10 @@ a:hover, a:focus, a:active {
   font-style: italic;
 }
 
+.bold {
+  font-weight: bold;
+}
+
 
 
 /*******************
