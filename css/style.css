@@ -222,9 +222,9 @@ About Page
 
 main section {
   width: 40%;
-  height: 275px;
+  /*height: 275px;*/
   display: inline-block;
-  margin: 0 2.5%;
+  margin: 0 2.5% 20px;
   vertical-align: top;
 }
 
