@@ -66,7 +66,7 @@ $(document).ready(function() {
     // when they press a key
     searchInput.keyup(function(event) {
       var searchVal = $('#search-input').val();
-      
+
       $(this).attr("value", $(this).val());
 
       // make the link below the search bar show the right text and link to the right place
@@ -85,6 +85,7 @@ $(document).ready(function() {
     if (urlDecoded.substr(0, 3) == "?q=") {
       // trim off the "?q=" part of the url
       urlDecoded = urlDecoded.substr(3);
+      urlDecoded = urlDecoded.replace(/(\S)\+(\S)/g, '$1 $2');
     }
 
     if (urlDecoded.length > 0) {
