@@ -37,12 +37,12 @@ $(document).ready(function() {
 
   if (getCookie('theme') == 'dark') {
     $('body').addClass('dark-theme').removeClass('light-theme');
-    $('#ddg-logo').attr('src', 'img/ddg-logo-dark-theme.png');
+    $('#ddg-logo').attr('src', 'img/google-logo-dark-theme.png');
     $('#ddg-theme-url-param').attr("value", "d");
   }
   else if (getCookie('theme') == 'light') {
     $('body').addClass('light-theme').removeClass('dark-theme');
-    $('#ddg-logo').attr('src', 'img/ddg-logo-light-theme.png');
+    $('#ddg-logo').attr('src', 'img/google-logo-light-theme.png');
     $('#ddg-theme-url-param').attr("value", "-1");
   }
 
@@ -205,7 +205,7 @@ $(document).ready(function() {
   // switching themes
   $('#dark-theme-icon').click(function() {
     $('body').addClass('dark-theme').removeClass('light-theme');
-    $('#ddg-logo').attr('src', 'img/ddg-logo-dark-theme.png');
+    $('#ddg-logo').attr('src', 'img/google-logo-dark-theme.png');
     $('#ddg-theme-url-param').attr("value", "d");
 
     document.cookie = 'theme=dark; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/;';
@@ -213,7 +213,7 @@ $(document).ready(function() {
 
   $('#light-theme-icon').click(function() {
     $('body').addClass('light-theme').removeClass('dark-theme');
-    $('#ddg-logo').attr('src', 'img/ddg-logo-light-theme.png');
+    $('#ddg-logo').attr('src', 'img/google-logo-light-theme.png');
     $('#ddg-theme-url-param').attr("value", "-1");
 
     document.cookie = 'theme=light; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/;';

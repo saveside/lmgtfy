@@ -1,5 +1,7 @@
-# LMDDGTFY
+# LMGTFY
 
-[Let Me DuckDuckGo That For You - LMDDGTFY](https://kk4oxj.github.io/lmddgtfy)
+[Let Me Google That For You - LMGTFY](https://lmddgtfy.medip.dev/)
 
-Dax (the DuckDuckGo mascot), and the word “DuckDuckGo” are copyrighted by DuckDuckGo
+Google logo and the word “Google” are copyrighted by Google
+
+Thanks to [myano](https://github.com/myano/) for [lmddgtfy](https://github.com/myano/lmddgtfy)
